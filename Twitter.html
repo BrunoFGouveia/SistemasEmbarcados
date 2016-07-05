@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Aula Wemos D1 mini nas Nuvens</title>
+</head>
+
+<body>
+<h3>
+<strong>
+IFPB - Campus J Pessoa
+<br>
+Mestrado em Engenharia Elétrica
+<br>
+Sistemas Embarcados
+<br>
+Semestre: 2016.1
+<br>
+Bruno F Gouveia
+</strong>
+<br>
+</h3>
+
+<h1 align=center>Wemos D1 mini na Nuvem </h1>
+
+
+<section id="main-content">
+	<h3> Twitter</h3>
+	Este tutorial explica como o Arduino pode atualizar um status Twitter. Utilizando o ThingTweet App. 
+
+<h2>Pré-Requisitos</h2>
+<ul>
+<li>
+	<p>Computador com acesso a internet</p>
+</li>
+<li>
+	<p>Conta o Twitter Ativa</p>
+</li>
+</ul>
+
+<h2>Criando Conta</h2>
+ Se você já possui uma conta, você pode avançar para a "Aplicativo" deste documento.
+
+Para começar, você precisa criar uma conta 
+<a target="_blank" href="https://thingspeak.com/login">https://thingspeak.com/login</a>
+, Se você já possui uma conta, você pode avançar para a "Aplicativo" no menu, e em seguida em
+<a target="_blank" href="https://www.thingspeak.com/apps/thingtweet" title="Twitter Proxy app from ThingSpeak">ThingTweet</a>
+<br>
+<ol>
+<img src="Imagem/loginthing.jpg" alt="image alt text" style="max-width:50%;"></li>
+</ol>
+<p>Sob o ThingTweet App, selecione "Ligar nova conta no Twitter". Isto irá redirecioná-lo para o Twitter para ver se você quiser que o aplicativo tem a capacidade de acessar a sua conta. Você pode permitir ou negar o processo. Depois de ter confirmado a conta do Twitter direita, o Twitter vai mandar de volta para ThingSpeak
+</p>
+
+<ol>
+<img src="Imagem/autorizarThing.jpg" alt="image alt text" style="max-width:50%;"></li>
+</ol>
+
+<p>O aplicativo gera uma chave de API ThingTweet para você usar. Se você enviar um HTTP POST com a sua chave ThingTweet API, em seguida, a mensagem será retransmitida para Twitter. Todos os parâmetros da API do Twitter (status / update) são possíveis, incluindo geolocalização.</p>
+
+
+
+<div>
+<h3>HTTP POST to ThingTweet</h3>
+<p>Exemplo HTTP POST para atualizar o Status Twitter via ThingTweet:</p>
+<div>POST /apps/thingtweet/1/statuses/update HTTP/1.1</div>
+<div>
+<div>Host: api.thingspeak.com</div>
+<div>Connection: close</div>
+<div>Content-Type: application/x-www-form-urlencoded</div>
+<div>Content-Length: (number of characters in message)api_key=(thingtweet_api_key)&status=My thing is social!</div>
+</div>
+
+</section>
+
+<br>
+<br>
+<br>
+<br>
+
+</body>
+
+</html>

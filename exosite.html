@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Aula Wemos D1 mini nas Nuvens</title>
+</head>
+
+<body>
+<h3>
+<strong>
+IFPB - Campus J Pessoa
+<br>
+Mestrado em Engenharia Elétrica
+<br>
+Sistemas Embarcados
+<br>
+Semestre: 2016.1
+<br>
+Bruno F Gouveia
+</strong>
+<br>
+</h3>
+
+<h1 align=center>Wemos D1 mini na Nuvem </h1>
+
+
+<section id="main-content">
+	<h3> Exosite</h3>
+Este tutorial irá explicar como configurar um Portal gratuitos, criar uma conta,dispositivo e dados associado, enviar dados para esse dispositivo, e exibir os dados em um widget na sua página inicial do painel.
+
+<h2>Pré-Requisitos</h2>
+<ul>
+<li>
+	<p>Computador com acesso a internet</p>
+</li>
+<li>
+	<p>Conta de Email Ativa</p>
+</li>
+</ul>
+
+<h2>Criando Conta</h2>
+Para começar, você precisa criar uma conta. Se você já possui uma conta, você pode avançar para a "criar um novo dispositivo" deste documento.
+
+<ol>
+<li>Acessar o site do Exosite’s <a href="http://portals.exosite.com/signup">Account Sign Up web page</a>.</li>
+<li>Complete o formulário e criar a conta. <br>
+<img src="imagem/signup.jpg" alt="image alt text" style="max-width:100%;"></li>
+<li>Você receberá um e-mail do portals.exosite.com que lhe pede para ativar sua conta. Clique no link apropriado no e-mail para ativar sua conta.</li>
+<li>Quando concluída, faça o login na sua conta <a href="https://portals.exosite.com/login">Portals login page</a> usando seu endereço de e-mail ea senha que você acabou de criar..
+<img src="Imagem/login.jpg" alt="image alt text" style="max-width:100%;"></li>
+
+
+
+Portal<br>
+<img src="Imagem/portal.png" alt="image alt text" style="max-width:50%;">
+<br>
+
+Exemplo<br> 
+<img src="Imagem/myportal.jpg" alt "image alt text" style="max-width:50%;">
+
+
+
+<h2>Criando novo Device</h2>
+
+<p> Para os fins deste tutorial, este dispositivo será temperatura para o qual você pode gravar dados da temperatura Ambiente.</p>
+
+<ol>
+
+<li> Selecione Devices na barra lateral e na pagina, click "+ Add Device." A <em>Device Setup *window will open. On the *Setup Type</em> tab, selecione a opção "I want to create a generic device." Click Continue.
+	<br>
+<img src="Imagem/devices.jpg" alt "image alt text" style="max-width:50%;"></li>
+
+<li> <em>Device Setup</em> :
+
+<ol>
+<li>Verifique se o tipo de dispositivo menu drop-down é definido como genérico..</li>
+<li>Selecione seu fuso horário.</li>
+<li>Digite um local no campo <em>Device Location</em> A localização pode ser qualquer coisa que indica a localização do dispositivo, mas não pode ser deixado vazio. No exemplo a seguir, a localização é definida para João Pessoa.</li>
+<li>Click Continue.
+	<br>
+<img src="Imagem/devices2.jpg" alt "image alt text" style="max-width:50%;"></li>
+<li>Em seguida especifique um nome para o dispositivo.</li>
+
+<br>
+Agora você deve ver o dispositivo que você acabou de criar. Para visualizar as informações pertinentes sobre o dispositivo, clique no dispositivo para abrir a janela de Informações do dispositivo.
+<br>
+<img src="Imagem/devices3.jpg" alt "image alt text" style="max-width:50%;"></li>
+
+
+</ol>
+
+</ol>
+
+<h2>Criando novo Dado</h2>
+
+
+<p>Para gravar dados no dispositivo que você acabou de criar, você precisa primeiro criar uma porta de dados para conter os dados. A porta de dados contém uma série de pontos com registro de tempo e pode viver dentro de um dispositivo ou de um portal.</p>
+
+<ol>
+<li>Selecione "Data" do menu Portal para exibir uma lista de todos os dispositivos em seu portal e suas portas de dados associados.
+</li>
+<li>Em <em>Data</em>, click "+ Add Data."
+
+<li>Abrirar a janela da <em>Data Setup</em>:
+
+
+<li>Selecione o rótulo do botão de rádio "From a Device" já que você está adicionando uma porta de dados para o dispositivo que você acabou de criar.</li>
+<li>Selecione o dispositivo que você acabou de criar</li>
+<li>Click Continue.<br>
+<img src="Imagem/datasetup.jpg" alt "image alt text" style="max-width:50%;"></li>
+</ol>
+<br>
+<ol>
+	<h3>Configurando o dado</h3>
+<li>Em *Data Source Name *field. Escolha o nome fantasia para descrever o seu dado.</li>
+<li>Selecione o tipo do dados em <em>Data Source Format</em>. No caso de temperatura podemos escolher Float</li>
+<li>Escolha a Unidade no Dado. No exemplo aqui ºC/li>
+<li>Este é o nome de dispositivos que será usado para identificar este dado ao acessar interfaces (APIs).</li>
+<li>Click Submit.</li>
+</ol>
+<br>
+
+<img src="Imagem/datasetup2.jpg" alt "image alt text" style="max-width:50%;"></li>
+
+</ol>
+
+
+
+<br>
+
+<h2>Personalizando Widgets</h2>
+
+<p>Agora que você tem um dado configurado à porta de dados, você pode criar um widget para capturar essa informação na sua página inicial do painel.</p>
+
+<ol>
+<li>Selecione "Home" no menu para retornar a pagina principal.</li>
+<li>Click "Add Widget" para adicionar um novo Widget.
+<li>Selecione Gauge em <em>Widget Type</em> na opção.
+<li><em>Block Title</em> é o Título do Widget.
+<li>Click Continue.</li>
+<img src="Imagem/widget.jpg" alt="image alt text" style="max-width:50%;"></li>
+
+
+
+<li><p>Na guia de Configuração, você pode configurar muitas características do widget.</p>
+	<br>
+<img src="Imagem/widget2.jpg" alt="image alt text" style="max-width:50%;"></li>
+
+
+<li>Click Submit.</li>
+<li><p>Deverá da uma mensagem <em>Widget added successfully</em>. Click Quit para retornar para seu dashboard.
+	<br>
+<img src="Imagem/widget3.jpg" alt="image alt text" style="max-width:50%;"></li>
+
+</ol>
+
+<p>Por padrão, o novo widget ocupa o primeiro espaço vazio no painel.</p>
+<p>
+	Observe que os relatórios de widget recarrega com base no tempo de atualização que você definiu. Você pode usar cURL ou EXOline para gravar dados eo widget irá atualizar automaticamente o número que aparece quando ele recarrega.
+</p>
+
+</section>
+
+<h1 id="http-api-overview">HTTP API Overview</h1>
+<p>This is a lightweight HTTP-based API for writing to and reading from the Exosite One Platform. It is intended for bandwidth-constrained applications. It provides the ability to write new data points or read the latest data point.</p>
+
+<h1 id="data-procedures">Data Procedures</h1>
+<h2 id="write">
+Write
+<a id="write"></a>
+</h2>
+<p>
+Write one or more dataports of alias
+<code><alias></code>
+with given
+<code><value></code>
+. The client (e.g. device, portal) is identified by
+<code><CIK></code>
+. Data is written with the server timestamp as of the time the data was received by the server. Data cannot be written faster than a rate of once per second, doing so results in undefined behavior. If multiple aliases are specified, they are written at the same timestamp.
+</p>
+<h3 id="request">
+request
+<a id="request"></a>
+</h3>
+<pre>
+<code>POST /onep:v1/stack/alias HTTP/1.1 Host: m2.exosite.com X-Exosite-CIK: <CIK> Content-Type: application/x-www-form-urlencoded; charset=utf-8 Content-Length: <length> <blank line> <alias 1>=<value 1>&<alias 2...>=<value 2...>&<alias n>=<value n> </code>
+</pre>
+
+</body>
+
+</html>
