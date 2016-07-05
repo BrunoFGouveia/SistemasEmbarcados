@@ -60,7 +60,7 @@ void setup() {
   String PostData = "temp="+String(temp);
   Serial.print("requesting URL: ");
 
-  String tsData="My thing is social @thingspeak";
+  String tsData="A temperatura em João Pessoa é " + String(temp) + "ºC";
 
   // Create HTTP POST Data
     tsData = "api_key="+thingtweetAPIKey+"&status="+tsData;
