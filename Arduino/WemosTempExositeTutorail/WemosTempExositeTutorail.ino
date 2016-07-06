@@ -101,7 +101,7 @@ void loop() {
 
 long ler_temp(){
   for (int i=0; i<50; i++){
-    float x = (float(analogRead(A0))*5/(1023))/0.01;
+    float x = (float(analogRead(A0))*3/(1023))/0.01;
     samples.add(x);
     
   }

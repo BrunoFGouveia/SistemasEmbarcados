@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Aula Wemos D1 mini nas Nuvens</title>
+</head>
+
+<body>
+<h3>
+<strong>
+IFPB - Campus J Pessoa
+<br>
+Mestrado em Engenharia Elétrica
+<br>
+Sistemas Embarcados
+<br>
+Semestre: 2016.1
+<br>
+Bruno F Gouveia
+</strong>
+<br>
+</h3>
+
+<h1 align=center>LM35 – Medindo temperatura com Arduino </h1>
+
+
+<section id="main-content">
+	<h3> LM35</h3>
+	O sensor LM35 é um sensor de precisão que apresenta uma saída de tensão linear proporcional à temperatura em que ele se encontrar no momento, tendo em sua saída um sinal de 10mV para cada Grau Célsius de temperatura. 
+	<br>
+	<img src="Imagem/lm35.jpg" alt="image alt text" style="max-width:20%;"></li>
+
+<h2>Hardware</h2>
+<ul>
+<li>
+	<p>Fios Jumper’s</p>
+</li>
+<li>
+	<p>Protoboard</p>
+</li>
+<li>
+	<p>Wemos D1 mini</p>
+</li>
+<li>
+	<p>LM35</p>
+</li>
+</ul>
+
+<h3>Agora vamos conectar os componentes do projeto.Veja como ficou o nosso:</h3>
+<br>
+ <img src="Imagem/wemoslm35.jpg" alt="image alt text" style="max-width:100	%;"></li>
+<p>Ao executar o programa, o LM35 vai enviar informações pela entrada analógica do Arduino, que por sua vez vai tratar essas informações, converter a tensão do sensor para graus celsius.</p>
+<p>Existem outros sensores de temperatura mais modernos, como o DS18B20, que é um sensor digital, possui bibliotecas próprias, possibilidade de ligar mais de um sensor na mesma porta do Arduino, e várias outras vantagens. </p>
+
+
+
+<h4>Datasheet LM35 :</h4>
+<a href="http://www.datasheetcatalog.com/datasheets_pdf/L/M/3/5/LM35.shtml">Datasheet LM35</a>
+
+<h3>Software</h3>
+
+<p>Em resumo, nosso programa lerá qual é o valor do sinal em A0, que varia de 0 a 1023, onde 0 corresponde a 0Volts e 1023 corresponde a 3Volts. Como sabemos, 1ºC é igual a 10mV. Sendo assim, temos:</p>
+
+<p align=center>Tensão em A0 = (Valor lido em A0)*(3/1023)</p>
+
+<p align=center>Temperatura = Tensão em A0/10mV</p>
+
+<p align=center>Logo:</p>
+
+<p align=center>Temperatura =  [(Valor lido em A0)*(3/1023)]/10mV
+</p>
+
+</section>
+
+<br>
+<br>
+<br>
+<br>
+
+</body>
+
+</html>

@@ -19,7 +19,7 @@ RunningMedian samples = RunningMedian(50);
 
 
 const char* ssid = "...";
-const char* password = "...";
+const char* password = "....";
 
 const char* host = "api.thingspeak.com";
 const int httpsPort = 443;
@@ -48,7 +48,16 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 
-   Serial.print("connecting to ");
+   
+
+
+
+ 
+}
+
+void loop() {
+  i++;
+  Serial.print("connecting to ");
     Serial.println(host);
    if (!client.connect(host, httpsPort)) {
       Serial.println("connection failed");
@@ -60,7 +69,7 @@ void setup() {
   String PostData = "temp="+String(temp);
   Serial.print("requesting URL: ");
 
-  String tsData="A temperatura em João Pessoa é " + String(temp) + "ºC";
+  String tsData="A temperatura em João Pessoa está " + String(temp) + "ºC" + String(i);
 
   // Create HTTP POST Data
     tsData = "api_key="+thingtweetAPIKey+"&status="+tsData;
@@ -97,12 +106,7 @@ void setup() {
   Serial.println("==========");
   Serial.println("closing connection");
 
-
-
- 
-}
-
-void loop() {
+  delay(1000000);
  
    
 
@@ -111,7 +115,7 @@ void loop() {
 
 long ler_temp(){
   for (int i=0; i<50; i++){
-    float x = (float(analogRead(A0))*5/(1023))/0.01;
+    float x = (float(analogRead(A0))*3/(1023))/0.01;
     samples.add(x);
     
   }

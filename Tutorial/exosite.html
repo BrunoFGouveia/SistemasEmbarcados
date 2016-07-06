@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Aula Wemos D1 mini nas Nuvens</title>
+<title>Aula ESP8266 nas Nuvens</title>
 </head>
 
 <body>
@@ -21,11 +21,11 @@ Bruno F Gouveia
 <br>
 </h3>
 
-<h1 align=center>Wemos D1 mini na Nuvem </h1>
+
 
 
 <section id="main-content">
-	<h3> Exosite</h3>
+	<h2 align=center> Tutorial Exosite</h2>
 Este tutorial irá explicar como configurar um Portal gratuitos, criar uma conta,dispositivo e dados associado, enviar dados para esse dispositivo, e exibir os dados em um widget na sua página inicial do painel.
 
 <h2>Pré-Requisitos</h2>
@@ -161,29 +161,32 @@ Agora você deve ver o dispositivo que você acabou de criar. Para visualizar as
 
 </section>
 
-<h1 id="http-api-overview">HTTP API Overview</h1>
-<p>This is a lightweight HTTP-based API for writing to and reading from the Exosite One Platform. It is intended for bandwidth-constrained applications. It provides the ability to write new data points or read the latest data point.</p>
+<h2 id="http-api-overview">HTTP API Overview</h2>
+<p>Esta é uma API baseada em HTTP  para gravar e ler a partir da Plataforma exosítio . Ele é destinado a aplicações com limitações de largura de banda. Ele fornece a capacidade de escrever novos dados ou ler o último dado.</p>
 
-<h1 id="data-procedures">Data Procedures</h1>
+<h1 id="data-procedures">Procedimentos de dados</h1>
 <h2 id="write">
-Write
+Escrita
 <a id="write"></a>
 </h2>
 <p>
-Write one or more dataports of alias
-<code><alias></code>
-with given
-<code><value></code>
-. The client (e.g. device, portal) is identified by
-<code><CIK></code>
-. Data is written with the server timestamp as of the time the data was received by the server. Data cannot be written faster than a rate of once per second, doing so results in undefined behavior. If multiple aliases are specified, they are written at the same timestamp.
+	O cliente ( por exemplo, dispositivo , portal ) é identificado por alias  definidos . Os dados são gravados com o servidor gravando a hora a partir do momento que os dados foram recebidos pelo servidor . Os dados não podem ser escritos mais rápido do que uma taxa de uma vez por segundo, isso resulta em um comportamento indefinido. Se vários alias são especificados, eles são escritos ao mesmo tempo.
 </p>
 <h3 id="request">
-request
+Exemplo de Request
 <a id="request"></a>
 </h3>
 <pre>
-<code>POST /onep:v1/stack/alias HTTP/1.1 Host: m2.exosite.com X-Exosite-CIK: <CIK> Content-Type: application/x-www-form-urlencoded; charset=utf-8 Content-Length: <length> <blank line> <alias 1>=<value 1>&<alias 2...>=<value 2...>&<alias n>=<value n> </code>
+<code>	
+POST /onep:v1/stack/alias HTTP/1.1 
+Host: m2.exosite.com 
+X-Exosite-CIK: <CIK> 
+Content-Type: application/x-www-form-urlencoded; charset=utf-8 
+Content-Length: <length> 
+<blank line>
+<alias 1>=<value 1>&<alias 2...>=<value 2...>&<alias n>=<value n>
+
+	 </code>
 </pre>
 
 </body>
